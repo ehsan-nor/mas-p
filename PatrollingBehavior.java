@@ -54,7 +54,7 @@ public class PatrollingBehavior extends AbstractBehavior<PatPlane> {
         {
             if(avr.getTasks().size()<10)
                 avr.addTask(new Task(lt.get(i)));
-            if(i<lt.size()-1)
+            if(i<=lt.size()-1)
                 i++;
             else
                  while(1)
