@@ -50,14 +50,22 @@ public class PatrollingBehavior extends AbstractBehavior<PatPlane> {
     private void patrolling()
     {
         int i=0;
-        for(;;)
+        while(1)
         {
             if(avr.getTasks().size()<10)
                 avr.addTask(new Task(lt.get(i)));
             if(i<lt.size()-1)
                 i++;
             else
-                i=0;
+                 while(1)
+ +            {
+ +                if(avr.getTasks().size()<10)
+ +                    avr.addTask(new Task(lt.get(i)));
+ +                if(i >= 0)
+ +                    i--;
+ +                else
+ +                    break;
+ +            }
         }
     }
     
